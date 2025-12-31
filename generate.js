@@ -28,11 +28,11 @@ function createColorCard(color) {
 function regenerateColors(){
    const colorCards = palette.querySelectorAll(".color-block");
     for (const card of colorCards) {
+        const newHex = randomColor(); 
         const display = card.querySelector(".color-display");
-        display.style.backgroundColor = randomColor();
-
+        display.style.backgroundColor = newHex;
         const code = card.querySelector(".color-code");
-        code.textContent = display.style.backgroundColor;
+        code.textContent = newHex;    
     }
 }
 function removeColorCard(){
