@@ -1,6 +1,7 @@
 const palette = document.getElementById("palette");
 const addButton = document.getElementById("addColor");
 const subtractButton = document.getElementById("subtractColor");
+const generateButton = document.getElementById("regenerate");
 
 function randomColor() {
   const hex = Math.floor(Math.random() * 16777215).toString(16);
@@ -24,6 +25,16 @@ function createColorCard(color) {
   // Insert BEFORE the + button
   palette.appendChild(card, addButton);
 }
+function regenerateColors(){
+   const colorCards = palette.querySelectorAll(".color-block");
+    for (const card of colorCards) {
+        const display = card.querySelector(".color-display");
+        display.style.backgroundColor = randomColor();
+
+        const code = card.querySelector(".color-code");
+        code.textContent = display.style.backgroundColor;
+    }
+}
 function removeColorCard(){
      const colorCards = palette.querySelectorAll(".color-block");
 
@@ -38,4 +49,7 @@ addButton.addEventListener("click", () => {
 });
 subtractButton.addEventListener("click", () => {
   removeColorCard();
+});
+generateButton.addEventListener("click", () =>{
+    regenerateColors();
 });
