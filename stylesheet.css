@@ -5,6 +5,11 @@
   height: 215px;
   align-items: stretch;
 }
+#palette {
+    display: flex;          
+    flex-direction: row;
+    gap: 0.5rem;             
+}
 .color-block{
     width: 200px;
     height: 450px;
@@ -40,6 +45,16 @@ h1{
   align-self: center;
   background-color: pink;
   color: white;
+
+}
+.edit-color-block{
+  width: 100px;
+  height: 450px;
+  border-radius: 8px;
+  border: 2px dashed #aaa;
+  font-size: 3rem;
+  background: transparent;
+  cursor: pointer;
 
 }
 

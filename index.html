@@ -7,21 +7,23 @@
 
 <body>
 
-<h1>Color Palette Generator</h1>
-<p>My first paragraph.</p>
-<div class = "container">
-    <div class = "palette-row">
-        <div class="color-block">
-            <div class="color-display" style="background-color: #A1B2C3;"></div>
-            <div class="color-code">#A1B2C3</div>
-        </div>
+    <h1>Color Palette Generator</h1>
+   
+    <div class = "container">
+        <div class = "palette-row">
+            <button class="edit-color-block" id="subtractColor">-</button>
+            <div id = "palette">
+                
+            </div>
 
-        <div class="color-block">
-            <div class="color-display" style="background-color: #FF5733;"></div>
-            <div class="color-code">#FF5733</div>
+            <!-- <div class="color-block">
+                <div class="color-display" style="background-color: #FF5733;"></div>
+                <div class="color-code">#FF5733</div>
+            </div> -->
+         <button class="edit-color-block" id="addColor">+</button>
         </div>
+        <button class = "generate-button"> Generate </button>
     </div>
-    <button class = "generate-button"> Generate </button>
-</div>
+ <script src="generate.js"></script>
 </body>
 </html> 
